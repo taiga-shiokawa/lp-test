@@ -21,8 +21,6 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
 }
-
-
 .nav ul {
   display: flex;
   list-style: none;
@@ -46,19 +44,6 @@ body {
 }
 
 @media (max-width: 768px) {
-.nav {
-    position: fixed;
-    top: 0;
-    right: -200px;
-    width: 200px;
-    height: 100%;
-    background: #f8f8f8;
-    padding-top: 60px;
-    transition: right 0.3s ease-in-out;
-  }
-
-  .nav.open {
-    right: 0;
   }
 
   .nav ul {
@@ -66,7 +51,6 @@ body {
   }
 
   .nav li {
-    margin: 10px 20px;
   }
 
   .menu-toggle {

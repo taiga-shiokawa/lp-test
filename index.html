@@ -29,16 +29,6 @@
   <script>
     const menuToggle = document.getElementById('menuToggle');
     const navMenu = document.getElementById('nav-menu');
-    const hamburger = '\u2630';
-    const closeIcon = '\u00d7';
-
-    menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
-      if (navMenu.classList.contains('open')) {
-        menuToggle.textContent = closeIcon;
-      } else {
-        menuToggle.textContent = hamburger;
-      }
     });
   </script>
 </body>
