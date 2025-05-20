@@ -3,3 +3,73 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #f8f8f8;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+.nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav li {
+  margin-left: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+.nav {
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100%;
+    background: #f8f8f8;
+    padding-top: 60px;
+    transition: right 0.3s ease-in-out;
+  }
+
+  .nav.open {
+    right: 0;
+  }
+
+  .nav ul {
+    flex-direction: column;
+  }
+
+  .nav li {
+    margin: 10px 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}

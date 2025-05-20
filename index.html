@@ -4,10 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-
+  <header class="site-header">
+    <div class="logo">Logo</div>
+    <nav id="nav-menu" class="nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" id="menuToggle">&#9776;</button>
   </header>
 
   <main>
@@ -15,7 +24,22 @@
   </main>
 
   <footer>
-    
+
   </footer>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('nav-menu');
+    const hamburger = '\u2630';
+    const closeIcon = '\u00d7';
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+      if (navMenu.classList.contains('open')) {
+        menuToggle.textContent = closeIcon;
+      } else {
+        menuToggle.textContent = hamburger;
+      }
+    });
+  </script>
 </body>
 </html>
